@@ -12,6 +12,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.core.data.Resource
 import com.example.genshinapp.ui.components.AgentsList
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun HomeScreen(

@@ -32,4 +32,9 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.50")
     annotationProcessor("com.google.dagger:hilt-compiler:2.50")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+
+    implementation("io.insert-koin:koin-core:3.6.0-wasm-alpha2")
+    implementation("io.insert-koin:koin-android:3.6.0-wasm-alpha2")
+    implementation("io.insert-koin:koin-androidx-compose:3.6.0-wasm-alpha2")
+
 }

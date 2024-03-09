@@ -1,37 +1,30 @@
-package com.example.genshinapp.util
+package com.example.genshinapp.ui.utilities
 
+import android.util.Log
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.currentComposer
-import androidx.compose.ui.Modifier
 import com.example.genshinapp.ui.components.DFNotFoundScreen
 import com.example.genshinapp.ui.factory.DynamicFeaturePackageFactory
 
 object DynamicFeatureUtils {
+
     @Composable
-    fun favoriteDynamicFeature(
-        modifier: Modifier = Modifier,
-        detailNavigation: (String) -> Unit,
-    ): Boolean {
+    fun dfFavorite(detailNavigation: (String)->Unit): Boolean {
         return loadDF(
-            modifier = modifier,
             detailNavigation = detailNavigation,
             className = DynamicFeaturePackageFactory.FavoriteDF.DF_FAVORITE_SCREEN,
             methodName = DynamicFeaturePackageFactory.FavoriteDF.COMPOSE_METHOD_NAME
         )
     }
-
     @Composable
-    fun ShowDFNotFoundScreen(
-        modifier: Modifier = Modifier,
-        detailNavigation: (String) -> Unit,
-    ) {
-        DFNotFoundScreen(modifier, detailNavigation)
+    fun ShowDFNotFoundScreen(detailNavigation: (String)->Unit) {
+        DFNotFoundScreen(detailNavigation)
     }
 
     @Composable
     private fun loadDF(
-        modifier: Modifier,
-        detailNavigation: (String) -> Unit,
+        detailNavigation: (String)->Unit,
         className: String,
         methodName: String,
         objectInstance: Any = Any(),
@@ -45,18 +38,19 @@ object DynamicFeatureUtils {
             )
             if (method != null) {
                 val isMethodInvoked =
-                    invokeMethod(method, objectInstance, modifier, detailNavigation, composer, 0)
+                    invokeMethod(method, objectInstance, detailNavigation, composer)
                 if (!isMethodInvoked) {
-                    ShowDFNotFoundScreen(modifier, detailNavigation)
+                    ShowDFNotFoundScreen(detailNavigation)
                     return false
                 }
+                Log.d("Method invoked", "Screen 1")
                 return true
             } else {
-                ShowDFNotFoundScreen(modifier, detailNavigation)
+                ShowDFNotFoundScreen(detailNavigation)
                 return false
             }
         } else {
-            ShowDFNotFoundScreen(modifier, detailNavigation)
+            ShowDFNotFoundScreen(detailNavigation)
             return false
         }
     }

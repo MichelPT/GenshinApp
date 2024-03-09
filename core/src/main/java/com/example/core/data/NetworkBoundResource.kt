@@ -29,7 +29,6 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
                     Log.d("Error", "ApiResponse Error. ${apiResponse.errorMessage}")
                 }
 
-                else -> {}
             }
         } else {
             emitAll(loadFromDB().map { Resource.Success(it) })

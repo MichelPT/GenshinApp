@@ -11,7 +11,7 @@ apply("../shared_dependencies.kts")
 
 android {
     namespace = "com.example.core"
-    compileSdk = 33
+    compileSdk = 34
 
     buildFeatures{
         viewBinding = true
@@ -43,12 +43,11 @@ android {
 }
 
 dependencies {
-    val hiltVersion = "2.50"
     val retrofitVersion = "2.9.0"
     val loggingVersion = "4.12.0"
     val roomVersion = "2.6.1"
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     testImplementation("junit:junit:4.13.2")

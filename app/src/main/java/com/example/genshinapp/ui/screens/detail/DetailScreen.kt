@@ -34,7 +34,7 @@ fun DetailScreen(
     agentId: String,
     detailViewModel: DetailViewModel = hiltViewModel(),
 ) {
-    var detailedAgent: Agent? = null
+    var detailedAgent: Agent?
     detailViewModel.certainAgent.collectAsStateWithLifecycle().value.let {
         when (it) {
             is Resource.Error -> {
