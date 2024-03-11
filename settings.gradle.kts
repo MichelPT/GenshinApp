@@ -12,7 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 rootProject.name = "GenshinApp"
 include(":app")
 include(":core")

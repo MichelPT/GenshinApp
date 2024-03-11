@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
 }
@@ -85,8 +85,4 @@ dependencies {
     api("androidx.navigation:navigation-ui-ktx:$nav_version")
     api("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
     api("androidx.navigation:navigation-dynamic-features-fragment:2.3.0-alpha03")
-}
-
-kapt {
-    correctErrorTypes = true
 }

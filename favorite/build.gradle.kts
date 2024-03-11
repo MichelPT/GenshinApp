@@ -1,7 +1,7 @@
 plugins {
     id("com.android.dynamic-feature")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
 }
 
 apply("../shared_dependencies.kts")
@@ -57,7 +57,4 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.annotation:annotation:1.7.1")
-}
-kapt {
-    correctErrorTypes = true
 }

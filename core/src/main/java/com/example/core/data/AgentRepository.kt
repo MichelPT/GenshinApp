@@ -10,11 +10,10 @@ import com.example.core.utils.AppExecutors
 import com.example.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class AgentRepository @Inject constructor(
+class AgentRepository(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource,
     private val appExecutors: AppExecutors,
@@ -51,7 +50,5 @@ class AgentRepository @Inject constructor(
             localDataSource.setFavoriteAgent(agentEntity, state)
         }
     }
-
-
 
 }

@@ -22,17 +22,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.example.core.data.Resource
 import com.example.core.domain.model.Agent
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun DetailScreen(
     modifier: Modifier,
     agentId: String,
-    detailViewModel: DetailViewModel = hiltViewModel(),
+    detailViewModel: DetailViewModel = koinViewModel(),
 ) {
     var detailedAgent: Agent?
     detailViewModel.certainAgent.collectAsStateWithLifecycle().value.let {
@@ -80,10 +80,10 @@ fun DetailPage(
     agent: Agent,
     detailViewModel: DetailViewModel,
 ) {
-    var isFav = remember { mutableStateOf(agent.isFavorite)}
+    val isFav = remember { mutableStateOf(agent.isFavorite) }
     Column(
         modifier.fillMaxSize(),
-        )
+    )
     {
         AsyncImage(
             model = agent.displayIcon,

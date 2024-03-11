@@ -1,7 +1,6 @@
 package com.example.genshinapp.ui.utilities
 
 import android.util.Log
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.currentComposer
 import com.example.genshinapp.ui.components.DFNotFoundScreen

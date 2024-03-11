@@ -1,7 +1,5 @@
 package com.example.di
 
-import com.example.core.domain.usecase.AgentInteractor
-import com.example.core.domain.usecase.AgentUseCase
 import com.example.favorite.FavoriteViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module

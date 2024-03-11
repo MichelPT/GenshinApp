@@ -1,6 +1,5 @@
 package com.example.core.data.source.local.entity
 
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,7 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "agent")
 data class AgentEntity(
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "uuid")
     val uuid: String,
 

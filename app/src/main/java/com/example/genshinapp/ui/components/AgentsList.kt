@@ -36,7 +36,12 @@ fun AgentsList(
                 }
             }
         } else {
-            Text(text = "No data!")
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = modifier.fillMaxSize().testTag("empty_list")
+            ) {
+                Text(text = "There is no favorite found")
+            }
         }
     } else {
         Box(

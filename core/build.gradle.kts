@@ -1,10 +1,8 @@
-import org.jetbrains.kotlin.gradle.targets.js.npm.includedRange
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
 }
 
 apply("../shared_dependencies.kts")
@@ -13,7 +11,7 @@ android {
     namespace = "com.example.core"
     compileSdk = 34
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 
@@ -61,10 +59,6 @@ dependencies {
 
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
     androidTestImplementation("androidx.room:room-testing:$roomVersion")
-}
-
-kapt {
-    correctErrorTypes = true
 }
