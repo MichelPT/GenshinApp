@@ -84,5 +84,5 @@ dependencies {
     api("androidx.navigation:navigation-fragment-ktx:$nav_version")
     api("androidx.navigation:navigation-ui-ktx:$nav_version")
     api("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
-    api("androidx.navigation:navigation-dynamic-features-fragment:2.3.0-alpha03")
+    api("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
 }
