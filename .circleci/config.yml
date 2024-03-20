@@ -56,11 +56,11 @@ jobs:
 
           command: sudo chmod +x ./gradlew
 
-      - run:
+      # - run:
 
-          name: Download Dependencies
+      #     name: Download Dependencies
 
-          command: ./gradlew androidDependencies
+      #     command: ./gradlew androidDependencies
 
       - save_cache:
 
