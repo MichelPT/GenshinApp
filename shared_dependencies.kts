@@ -36,5 +36,6 @@ dependencies {
     implementation("io.insert-koin:koin-core:3.6.0-wasm-alpha2")
     implementation("io.insert-koin:koin-android:3.6.0-wasm-alpha2")
     implementation("io.insert-koin:koin-androidx-compose:3.6.0-wasm-alpha2")
-
+    testImplementation("io.insert-koin:koin-test:3.6.0-wasm-alpha2")
+    testImplementation("io.insert-koin:koin-test-junit4:3.6.0-wasm-alpha2")
 }
