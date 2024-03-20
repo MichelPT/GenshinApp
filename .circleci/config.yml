@@ -35,7 +35,7 @@ jobs:
 
     docker:
 
-      - image: cimg/base:stable
+      - image: circleci/openjdk:11-jdk
 
     # Add steps to the job
 
