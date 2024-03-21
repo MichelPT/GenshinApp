@@ -5,14 +5,13 @@ import android.os.Looper
 import org.jetbrains.annotations.VisibleForTesting
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
-import javax.inject.Inject
 
 class AppExecutors @VisibleForTesting constructor(
     private val diskIO: Executor,
     private val networkIO: Executor,
     private val mainThread: Executor
 ) {
-    @Inject constructor():this(
+    @VisibleForTesting constructor():this(
         Executors.newSingleThreadExecutor(),
         Executors.newFixedThreadPool(THREAD_COUNT),
         MainThreadExecutor()

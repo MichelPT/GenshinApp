@@ -5,6 +5,8 @@ dependencies {
 
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
 
+    testImplementation("org.mockito:mockito-core:4.4.0")
+    testImplementation("org.mockito:mockito-inline:4.4.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
@@ -27,11 +29,6 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
     androidTestImplementation("androidx.room:room-testing:2.6.1")
-
-    implementation("com.google.dagger:hilt-android:2.50")
-    ksp("com.google.dagger:hilt-android-compiler:2.50")
-    annotationProcessor("com.google.dagger:hilt-compiler:2.50")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     implementation("io.insert-koin:koin-core:3.6.0-wasm-alpha2")
     implementation("io.insert-koin:koin-android:3.6.0-wasm-alpha2")

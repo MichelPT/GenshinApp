@@ -10,9 +10,7 @@ import com.example.core.utils.AppExecutors
 import com.example.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Singleton
 
-@Singleton
 class AgentRepository(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource,

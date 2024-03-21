@@ -84,6 +84,24 @@ jobs:
 
           destination: reports
 
+
+  test:
+
+    docker:
+
+      - image: cimg/android:2024.01
+
+    # Add steps to the job
+
+    # See: https://circleci.com/docs/configuration-reference/#steps
+
+    steps:
+      - checkout
+
+      # Restore the gradle cache
+      - restore_cache:
+          key: gradle-{{ checksum "build.gradle.kts" }}-{{ checksum  "settings.gradle.kts" }}
+
       - run:
 
           name: Run Tests
@@ -99,24 +117,6 @@ jobs:
           path: app/build/outputs/apk/debug/
 
           destination: artifact-file
-
-
-  test:
-  
-    docker:
-
-      - image: cimg/android:2024.01
-
-    # Add steps to the job
-
-    # See: https://circleci.com/docs/configuration-reference/#steps
-
-    steps:
-
-      # Checkout the code as the first step.
-
-      - checkout
-
 # Invoke jobs via workflows
 
 # See: https://circleci.com/docs/configuration-reference/#workflows
