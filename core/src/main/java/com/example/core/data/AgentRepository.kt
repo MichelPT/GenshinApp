@@ -24,6 +24,7 @@ class AgentRepository(
                 }
             }
 
+
             override suspend fun createCall(): Flow<ApiResponse<List<AgentResponse>>> =
                 remoteDataSource.getAllAgents()
 
@@ -31,8 +32,6 @@ class AgentRepository(
                 val agentList = DataMapper.mapResponsesToEntities(data)
                 localDataSource.insertAgent(agentList)
             }
-
-            override fun shouldFetch(data: List<Agent>?): Boolean = true
 
         }.asFlow()
 

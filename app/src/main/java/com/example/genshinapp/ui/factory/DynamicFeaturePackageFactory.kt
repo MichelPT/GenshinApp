@@ -1,5 +1,3 @@
-@file:Suppress("SpellCheckingInspection")
-
 package com.example.genshinapp.ui.factory
 
 object DynamicFeaturePackageFactory {

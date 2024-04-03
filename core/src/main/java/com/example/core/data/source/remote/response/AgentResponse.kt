@@ -105,26 +105,4 @@ data class Role(
 )
 
 
-data class RecruitmentData(
 
-    @field:SerializedName("levelVpCostOverride")
-    val levelVpCostOverride: Int? = null,
-
-    @field:SerializedName("endDate")
-    val endDate: String? = null,
-
-    @field:SerializedName("milestoneThreshold")
-    val milestoneThreshold: Int? = null,
-
-    @field:SerializedName("milestoneId")
-    val milestoneId: String? = null,
-
-    @field:SerializedName("useLevelVpCostOverride")
-    val useLevelVpCostOverride: Boolean? = null,
-
-    @field:SerializedName("counterId")
-    val counterId: String? = null,
-
-    @field:SerializedName("startDate")
-    val startDate: String? = null
-)

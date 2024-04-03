@@ -4,4 +4,6 @@
     <string name="favorite">Favorite</string>
     <string name="title_favorite">Favorite</string>
     <string name="search_agent">Search Agent</string>
+    <string name="power_connected">Power connected!</string>
+    <string name="power_disconnected">Power disconnected!</string>
 </resources>
