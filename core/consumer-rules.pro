@@ -97,6 +97,7 @@
  -keep,allowobfuscation,allowshrinking interface retrofit2.Call
  -keep,allowobfuscation,allowshrinking class retrofit2.Response
 
--keep class org.koin.compose.KoinApplicationKt {*;
+
+-keepclassmembers class com.example.core.domain.usecase.AgentUseCase {
+    public *** getFavoriteAgent();
 }
--keep class kotlin.collections.CollectionsKt { *; }

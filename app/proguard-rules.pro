@@ -23,8 +23,5 @@
 }
 -keep class kotlin.collections.CollectionsKt { *; }
 -keep class org.koin.compose.module.CompositionKoinModuleLoader { *; }
--keepclassmembers class com.example.core.domain.usecase.AgentUseCase {
-    public *** getFavoriteAgent();
-}
 -keep class androidx.lifecycle.FlowLiveDataConversions { *; }
 -keep class androidx.compose.runtime.livedata.LiveDataAdapterKt { *; }
